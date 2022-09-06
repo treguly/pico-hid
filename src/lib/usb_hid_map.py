@@ -113,6 +113,7 @@ ALT = LEFT_ALT
 CTRL = LEFT_CONTROL
 
 keyboard_character_map = {
+    ' ': SPACE,
     'a': 0x04,
     'b': 0x05,
     'c': 0x06,
