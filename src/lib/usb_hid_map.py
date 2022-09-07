@@ -184,6 +184,7 @@ keyboard_character_map = {
     '`': 0x35,
     ',': 0x36,
     '.': 0x37,
+    '/': 0x38,
     '!': [SHIFT, 0x1e],
     '@': [SHIFT, 0x1f],
     '#': [SHIFT, 0x20],
@@ -204,6 +205,7 @@ keyboard_character_map = {
     '~': [SHIFT, 0x35],
     '<': [SHIFT, 0x36],
     '>': [SHIFT, 0x37],
+    '?': [SHIFT, 0x38]
 }
 
 keyboard_character_map['\\'] = 0x31 #|
