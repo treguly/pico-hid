@@ -15,20 +15,20 @@ supervisor.disable_autoreload()
 
 kbd = Keyboard(usb_hid.devices)
 
-#Windows Key + R
+# Windows Key + R
 payload1 = [usb.RUN]
-#Command: calc + <enter>
+# Command: calc + <enter>
 payload2 = usb.get_sequence('calc')
 payload2.append(usb.ENTER)
-#Input
+# Input
 payload3 = usb.get_sequence('31337')
-#Close Command: ALT+F4
+# Close Command: ALT+F4
 payload4 = [usb.CLOSE]
 
-#Command: notepad + <enter>
+# Command: notepad + <enter>
 payload5 = usb.get_sequence('notepad')
 payload5.append(usb.ENTER)
-#Input: Tyler was here!
+# Input: Tyler was here!
 payload6 = usb.get_sequence('Tyler was here!')
 
 def send(this_input, sleep=0.25):
@@ -40,6 +40,8 @@ def send(this_input, sleep=0.25):
     time.sleep(sleep)
 
 time.sleep(2)
+# Close the Explorer Window that opens.
+send([usb.CLOSE])
 send(payload1)
 send(payload2, 1)
 send(payload3, 2)
