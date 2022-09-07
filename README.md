@@ -14,3 +14,12 @@ Plug in a Raspberry Pi Pico to your computer, it will mount as 'RPI-RP2'.
 
 ## Step 4
 Download this repo and place src/lib/usb_hid_map.py in CIRCUITPY/lib/ and src/code.py (or src/example/code.py) in CIRCUITPY/, replacing the existing code.py file. The Pico will restart and launch your payload. 
+
+# Optional Steps
+
+## boot.py
+Under src/optional, you'll find a boot.py file with two lines of code. When this file is placed on your Pico, it will prevent it from popping up as a USB storage device. Add this after you are happy with your payload and have loaded all of your files. To reset the device, you can access CircuitPython via the serial interface and use the following commands to reset the device to a clean CircuitPython image (it will wipe out boot.py, code.py, and your libraries). 
+```
+import storage
+storage.erase_filesystem()
+```
