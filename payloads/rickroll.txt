@@ -1,0 +1,5 @@
+# Windows Key + R
+payload1 = [usb.RUN]
+# Launch RickRoll
+payload2 = usb.get_sequence('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+payload2 += [usb.ENTER]
