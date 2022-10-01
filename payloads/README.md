@@ -44,4 +44,3 @@ Building the firmware can be done primarily by following the [instructions provi
 4. make BOARD=raspberry_pi_pico
 5. After the build is complete, take the firmware.uf2 file in board-raspberry_pi_pico folder and use it to flash your Pico
 
-# Additional Payload Notes
