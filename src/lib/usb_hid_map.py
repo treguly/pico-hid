@@ -111,6 +111,8 @@ WIN = LEFT_GUI
 SHIFT = LEFT_SHIFT
 ALT = LEFT_ALT
 CTRL = LEFT_CONTROL
+COMMAND = LEFT_GUI
+OPTION = LEFT_ALT
 
 keyboard_character_map = {
     ' ': SPACE,
@@ -215,6 +217,7 @@ keys = keyboard_character_map
 #SPECIAL COMMANDS
 CTRLALTDEL = [CTRL, ALT, DEL]
 RUN = [WIN, keys['r']]
+SPOTLIGHT = [COMMAND, SPACE]
 CLOSE = [ALT, F4]
 
 def get_sequence(user_input):
