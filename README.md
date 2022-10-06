@@ -1,5 +1,5 @@
 # pico-hid
-This code will allow the Raspberry Pi Pico to be detected as an HID device and send payloads to a system when plugged in. 
+This code will allow the Raspberry Pi Pico to be detected as an HID and send payloads to a system when plugged in. This project is intended to be educational, demonstrating how to emulate an HID and the risks of BadUSB attacks.
 
 # Installation Steps
 
